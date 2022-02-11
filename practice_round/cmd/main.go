@@ -31,7 +31,7 @@ func main() {
 	allIn := simulation.AddEverything{}
 	output := allIn.Run(customers)
 
-	err = writeFile("all_in_"+filename+".out", output)
+	err = writeFile(filename+".out", output)
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
