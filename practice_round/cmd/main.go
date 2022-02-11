@@ -28,10 +28,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	allIn := simulation.AddEverything{}
-	output := allIn.Run(customers)
+	//allIn := simulation.AddEverything{}
+	//output := allIn.Run(customers)
 
-	err = writeFile("all_in_"+filename+".out", output)
+	noDislikes := simulation.NoDislikes{}
+	output := noDislikes.Run(customers)
+
+	err = writeFile(filename+".out", output)
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
