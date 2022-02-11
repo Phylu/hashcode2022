@@ -34,8 +34,11 @@ func main() {
 	// noDislikes := simulation.NoDislikes{}
 	// output := noDislikes.Run(customers)
 
-	likesOverDislikes := simulation.LikesOverDislikes{}
-	output := likesOverDislikes.Run(customers)
+	// likesOverDislikes := simulation.LikesOverDislikes{}
+	// output := likesOverDislikes.Run(customers)
+
+	likesOverOrEqualDislikes := simulation.LikesOverOrEqualDislikes{}
+	output := likesOverOrEqualDislikes.Run(customers)
 
 	err = writeFile(filename+".out", output)
 	if err != nil {
