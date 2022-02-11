@@ -82,7 +82,7 @@ func parseFile(data string) (customer.CustomerDataset, error) {
 	}
 
 	if len(dataset.Customers) != dataset.Count {
-		return customer.CustomerDataset{}, errors.New("Number of parsed customers " + string(len(dataset.Customers)) + " does not equal to total number " + string(dataset.Count))
+		return customer.CustomerDataset{}, errors.New("Number of parsed customers " + strconv.Itoa(len(dataset.Customers)) + " does not equal to total number " + strconv.Itoa(dataset.Count))
 	}
 
 	return dataset, nil
