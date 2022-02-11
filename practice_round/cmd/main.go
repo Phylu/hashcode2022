@@ -28,19 +28,20 @@ func main() {
 		os.Exit(1)
 	}
 
-	//allIn := simulation.AddEverything{}
-	//output := allIn.Run(customers)
+	// allIn := simulation.AddEverything{}
+	// output := allIn.Run(customers)
 
-	noDislikes := simulation.NoDislikes{}
-	output := noDislikes.Run(customers)
+	// noDislikes := simulation.NoDislikes{}
+	// output := noDislikes.Run(customers)
+
+	likesOverDislikes := simulation.LikesOverDislikes{}
+	output := likesOverDislikes.Run(customers)
 
 	err = writeFile(filename+".out", output)
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
 	}
-
-	// TODO: other algorithms
 }
 
 func parseFile(data string) (customer.CustomerDataset, error) {

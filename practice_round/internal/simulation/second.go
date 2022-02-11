@@ -29,8 +29,3 @@ func (s NoDislikes) Run(customers customer.CustomerDataset) customer.PerfectPizz
 
 	return output
 }
-
-func remove(s []string, i int) []string {
-	s[i] = s[len(s)-1]
-	return s[:len(s)-1]
-}
