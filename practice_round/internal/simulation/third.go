@@ -1,11 +1,11 @@
 package simulation
 
-import "simulation/internal/customer"
+import "simulation/internal/models"
 
 type LikesOverDislikes struct{}
 
-func (s LikesOverDislikes) Run(customers customer.CustomerDataset) customer.PerfectPizzaDataset {
-	output := customer.PerfectPizzaDataset{}
+func (s LikesOverDislikes) Run(customers models.CustomerDataset) models.PerfectPizzaDataset {
+	output := models.PerfectPizzaDataset{}
 	likes := map[string]int{}
 	dislikes := map[string]int{}
 

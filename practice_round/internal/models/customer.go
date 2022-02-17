@@ -1,4 +1,4 @@
-package customer
+package models
 
 type Customer struct {
 	Likes    []string
@@ -8,8 +8,4 @@ type Customer struct {
 type CustomerDataset struct {
 	Customers []Customer
 	Count     int
-}
-
-type PerfectPizzaDataset struct {
-	Ingredients []string
 }

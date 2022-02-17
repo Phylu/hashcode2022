@@ -1,11 +1,11 @@
 package simulation
 
 import (
-	"simulation/internal/customer"
+	"simulation/internal/models"
 )
 
 type Simulation interface {
-	Run(customer.CustomerDataset) customer.PerfectPizzaDataset
+	Run(models.CustomerDataset) models.PerfectPizzaDataset
 }
 
 func unique(input []string) []string {
