@@ -22,7 +22,7 @@ func main() {
 			os.Exit(1)
 		}
 
-		allIn := simulation.FirstContributorWithSkillsSortedByScore{}
+		allIn := simulation.LowerContributorWithSkills{}
 		output := allIn.Run(dataset)
 
 		err = io.WriteFile(filename+".out", output)
