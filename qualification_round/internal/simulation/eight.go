@@ -13,7 +13,7 @@ func (s FirstContributorWithSkillsSortedByDuration) Run(dataset models.InputData
 
 	sortedProjects := dataset.Projects
 	sort.SliceStable(sortedProjects, func(i, j int) bool {
-		return sortedProjects[i].BestBefore > sortedProjects[j].BestBefore
+		return sortedProjects[i].Duration > sortedProjects[j].Duration
 	})
 
 	for _, project := range sortedProjects {
